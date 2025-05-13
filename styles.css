@@ -95,3 +95,10 @@ h3 {
 .card-text{
     font-size: 25px;
 }
+
+#follower {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(0deg);
+    pointer-events: none; /* prevents image from interfering with mouse */
+    z-index: 1000; /* make sure it's on top */
+  }
