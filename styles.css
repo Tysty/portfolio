@@ -1,0 +1,97 @@
+.staggered-fade {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: dropFadeIn 0.5s ease-out forwards;
+  }
+
+@keyframes dropFadeIn {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.text{
+    color: #FFDE9C;
+}
+
+body{
+    background-color: #1F2041;
+    font-family: 'MyFont', sans-serif;
+}
+
+.bg-navbar{
+    background-color: #3a405a;
+}
+
+.nav-link{
+    color: #8cb0eb;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+.nav-link:hover{
+    color: #CCDBF3;
+    transform: rotate(10deg);
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('Teko-Regular.ttf') format('truetype');
+}
+
+h1 {
+    font-size: 80px;
+}
+  
+h3 {
+    font-size: 50px;
+}
+  
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+
+
+  .fab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #FFDE9C;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: #1F2041;
+    transition: transform 0.3s ease;
+}
+
+
+.fab.staggered-fade:hover {
+    transform: scale(1.2) !important;
+  }
+
+.card{
+    margin: 5px 10px;
+    width: 20rem;
+}
+
+.card-title{
+    font-size: 30px;
+}
+
+.card-text{
+    font-size: 25px;
+}
