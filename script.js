@@ -61,31 +61,32 @@ window.onload = () => {
   let mouse = { x: pos.x, y: pos.y };
 
   document.addEventListener("mousemove", (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+    mouse.x = e.pageX;
+    mouse.y = e.pageY;
   });
 
   function animate() {
-    // Smooth movement toward mouse
+    // Smooth movement
     pos.x += (mouse.x - pos.x) * 0.1;
     pos.y += (mouse.y - pos.y) * 0.1;
-
-    // Clamp position so it stays in window
-    pos.x = Math.min(window.innerWidth - halfSize, Math.max(halfSize, pos.x));
-    pos.y = Math.min(window.innerHeight - halfSize, Math.max(halfSize, pos.y));
-
-    // Calculate rotation angle
-    const dx = mouse.x - pos.x;
-    const dy = mouse.y - pos.y;
-    const angle = Math.atan2(dy, dx) * (180 / Math.PI);
-
-    // Apply transform
+  
+    const halfWidth = follower.width / 2;
+    const halfHeight = follower.height / 2;
+  
+    // Clamp position based on full page size
+    const maxX = document.documentElement.scrollWidth - (halfWidth+15);
+    const maxY = document.documentElement.scrollHeight - halfHeight;
+  
+    pos.x = Math.min(maxX, Math.max(halfWidth, pos.x));
+    pos.y = Math.min(maxY, Math.max(halfHeight, pos.y));
+  
     follower.style.left = `${pos.x}px`;
     follower.style.top = `${pos.y}px`;
-    follower.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
-
+    follower.style.transform = `translate(-50%, -50%) rotate(${Math.atan2(mouse.y - pos.y, mouse.x - pos.x) * (180 / Math.PI)}deg)`;
+  
     requestAnimationFrame(animate);
   }
+  
 
   animate();
 };
