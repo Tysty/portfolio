@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (dist < 100) {
           const intensity = 1 - dist / 50;
           star.style.boxShadow = `0 0 ${10 * intensity}px white`;
-          star.style.transform = `scale(${1 + 0.5 * intensity})`;
+          star.style.transform = `scale(${3 + 0.5 * intensity})`;
         } else {
           star.style.boxShadow = 'none';
           star.style.transform = 'scale(1)';
@@ -54,7 +54,7 @@ function copyDiscord() {
 }
 window.onload = () => {
   const follower = document.getElementById("follower");
-  const halfSize = 25; // 50px / 2
+  const halfSize = 25;
 
   // Initial position at center of screen
   let pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
@@ -66,27 +66,41 @@ window.onload = () => {
   });
 
   function animate() {
-    // Smooth movement
+    // Smooth movement toward mouse
     pos.x += (mouse.x - pos.x) * 0.1;
     pos.y += (mouse.y - pos.y) * 0.1;
   
     const halfWidth = follower.width / 2;
     const halfHeight = follower.height / 2;
   
-    // Clamp position based on full page size
-    const maxX = document.documentElement.scrollWidth - (halfWidth+15);
+    // Clamp smoothed position
+    const maxX = document.documentElement.scrollWidth - (halfWidth + 15);
     const maxY = document.documentElement.scrollHeight - halfHeight;
   
     pos.x = Math.min(maxX, Math.max(halfWidth, pos.x));
     pos.y = Math.min(maxY, Math.max(halfHeight, pos.y));
   
-    follower.style.left = `${pos.x}px`;
-    follower.style.top = `${pos.y}px`;
-    follower.style.transform = `translate(-50%, -50%) rotate(${Math.atan2(mouse.y - pos.y, mouse.x - pos.x) * (180 / Math.PI)}deg)`;
+    // Calculate angle toward the cursor
+    const dx = mouse.x - pos.x;
+    const dy = mouse.y - pos.y;
+    const angleRad = Math.atan2(dy, dx);
+    const angleDeg = angleRad * (180 / Math.PI);
+  
+    // Offset behind the direction of movement
+    const offset = 50; // ← trail distance behind the cursor
+    const offsetX = Math.cos(angleRad) * -offset;
+    const offsetY = Math.sin(angleRad) * -offset;
+  
+    // Final draw position with offset
+    const drawX = pos.x + offsetX;
+    const drawY = pos.y + offsetY;
+  
+    follower.style.left = `${drawX}px`;
+    follower.style.top = `${drawY}px`;
+    follower.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg)`;
   
     requestAnimationFrame(animate);
   }
   
-
   animate();
 };
