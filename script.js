@@ -11,8 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement('div');
       star.className = 'star';
-      star.style.top = `${Math.random() * 100}vh`;
-      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 98}vh`;
+      star.style.left = `${Math.random() * 98}vw`;
       star.style.animationDelay = `${Math.random() * 2}s`;
       starContainer.appendChild(star);
       stars.push(star);
