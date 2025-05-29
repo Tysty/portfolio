@@ -166,5 +166,7 @@ h2{
 }
 
 .white{
-    color: white !important
+    color: white !important;
+    font-size: 25px;
+    
 }
