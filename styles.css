@@ -36,7 +36,7 @@ body{
 
 @font-face {
     font-family: 'MyFont';
-    src: url('Teko-Regular.ttf') format('truetype');
+    src: url('Teko-Light.ttf') format('truetype');
 }
 
 h1 {
