@@ -160,6 +160,11 @@ li,p{
     color: #3b3b3b;
     transition: transform 0.3s ease;
 }
+
 h2{
+    color: white !important
+}
+
+.white{
     color: white !important
 }
