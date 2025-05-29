@@ -147,3 +147,19 @@ li,p{
     padding: 10px;
     border: 15px solid rgb(255, 255, 255);
 }
+
+.tool-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    margin: 5px 10px;
+    text-decoration: none;
+    color: #3b3b3b;
+    transition: transform 0.3s ease;
+}
+h2{
+    color: white !important
+}
