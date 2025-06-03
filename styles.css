@@ -54,6 +54,7 @@ h3 {
     background: white;
     border-radius: 50%;
     animation: twinkle 2s infinite ease-in-out;
+    z-index: 0;
   }
 
   @keyframes twinkle {
@@ -171,4 +172,28 @@ h2{
     font-size: 25px;
     text-align: left;
     
+}
+
+.about-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 40px;
+}
+
+.about-left, .about-right {
+  flex: 1;
+}
+
+.about-right img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
 }
