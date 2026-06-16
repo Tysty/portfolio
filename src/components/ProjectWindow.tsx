@@ -139,6 +139,10 @@ function ProjectWindow() {
       <br />
       <div className="nav-separator" />
       <br />
+      <div className="center" style={{ fontSize: "30px" }}>
+        {project.link}
+      </div>
+      <br />
       <h1 className="project-title center">Retrospective</h1>
       <p>{project.retrospective}</p>
       <br />

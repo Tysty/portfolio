@@ -9,6 +9,11 @@ export { default as portrait } from './portrait.jpg';
 export { default as ArrowLeft } from './ArrowLeft.png';
 export { default as ArrowRight } from './ArrowRight.png';
 
+// Procedural Generation Workshop
+export { default as proceduralGen1 } from './proceduralgeneration2.png';
+export { default as proceduralGen2 } from './ProceduralGeneration.mp4';
+export { default as proceduralGen3 } from './ProceduralGeneration3.mp4';
+
 // Prawn Brawl
 export { default as PrawnThumb } from './PrawnBrawl.png';
 export { default as prawn1 } from './prawn1.png';
@@ -82,3 +87,9 @@ export { default as anime3 } from './animeanalysis3.png';
 export { default as anime4 } from './animeanalysis4.png';
 
 // Ecology Simulator
+
+// Portfolio Website
+export {default as portfolio1} from './portfolio_website1.png'
+export {default as portfolio2} from './portfolio_website2.png'
+export {default as portfolio3} from './portfolio_website3.png'
+export {default as portfolio4} from './portfolio_website4.png'
