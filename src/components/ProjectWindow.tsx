@@ -144,7 +144,7 @@ function ProjectWindow() {
       </div>
       <br />
       <h1 className="project-title center">Retrospective</h1>
-      <p>{project.retrospective}</p>
+      {project.retrospective}
       <br />
       <br />
     </motion.div>
