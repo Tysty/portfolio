@@ -2,6 +2,16 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .nav-separator {
   margin: 15px;
   border: none;
@@ -10,12 +20,7 @@ html {
   filter: blur(0.25px);
 }
 
-* {
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-  color: white;
-}
-
+/* Navigation */
 nav {
   padding-top: 10px;
   display: flex;
@@ -29,17 +34,20 @@ nav .nav-div {
   border-left: 2px solid #9BE9FF;
   border-right: 2px solid #9BE9FF;
   display: flex;
-  gap: 3rem;
-  padding: 0 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 4vw, 3rem);
+  padding: 0.5rem 1rem;
   box-shadow: 0px 0px 10px 3px #00B7FF;
   clip-path: inset(-20px -20px 0px -20px);
 }
 nav .nav-div .link {
   color: inherit;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 4vw, 2rem);
   text-decoration: none;
 }
 
+/* General center utility */
 .center {
   display: flex;
   flex-wrap: wrap;
@@ -48,49 +56,59 @@ nav .nav-div .link {
   text-align: center;
 }
 
+/* Home */
 .home-title {
-  font-size: 100px;
+  font-size: clamp(3rem, 10vw, 100px);
   margin-bottom: 0;
 }
 
 .home-text {
-  font-size: 30px;
+  font-size: clamp(1.2rem, 4vw, 30px);
 }
 
+/* Projects */
 .project-title {
-  font-size: 50px;
+  font-size: clamp(2rem, 6vw, 50px);
 }
 
 .project-p p {
-  font-size: 25px;
+  font-size: clamp(1rem, 3vw, 25px);
 }
 
 .project-card {
   display: inline-block;
   padding: 20px;
+  max-width: 100%;
 }
 
 .h-group {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Social buttons */
 .button-link {
-  width: 75px;
-  height: 75px;
+  width: clamp(55px, 12vw, 75px);
+  height: clamp(55px, 12vw, 75px);
   padding: 15px;
   border-radius: 50%;
   border: 2px solid #9BE9FF;
   background-color: #9BE9FF;
   box-shadow: 0px 0px 10px 3px #00B7FF;
   display: inline-flex;
-  margin: 15px;
-  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: clamp(5px, 2vw, 15px);
+  font-size: clamp(25px, 5vw, 40px);
 }
 
+/* Cards */
 .card {
   background-color: #443AFF;
   border-radius: 0;
+  width: 100%;
+  max-width: 500px;
 }
 
 .card-title {
@@ -106,13 +124,13 @@ nav .nav-div .link {
 }
 
 p {
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 20px;
+  padding-left: clamp(10px, 3vw, 30px);
+  padding-right: clamp(10px, 3vw, 30px);
+  font-size: clamp(1rem, 2vw, 20px);
 }
 
 li {
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 18px);
 }
 
 .truncate {
@@ -122,26 +140,33 @@ li {
   -webkit-line-clamp: 3;
 }
 
+/* Resume */
 .resume-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+.resume-container embed {
+  width: min(100%, 1000px);
+  height: min(80vh, 1150px);
+}
+
+/* Carousel */
 .carousel-button {
   background: none;
   border: none;
 }
 .carousel-button img {
-  width: 60px;
-  height: 60px;
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
 }
 
 .carousel-indicators {
   position: sticky;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: clamp(1rem, 3vw, 20px);
   top: 0;
 }
 
@@ -151,4 +176,79 @@ li {
 
 .carousel-item img {
   border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* Project page layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-8,
+.col-4,
+.col-lg-4,
+.col-md-12 {
+  max-width: 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  nav .nav-div {
+    width: 95%;
+    gap: 1rem;
+  }
+  nav .nav-div .link {
+    font-size: 1.2rem;
+  }
+  .home-title {
+    text-align: center;
+  }
+  .home-text {
+    text-align: center;
+  }
+  .project-card {
+    padding: 10px;
+    width: 100%;
+  }
+  .button-link {
+    margin: 8px;
+  }
+  .carousel {
+    height: auto !important;
+  }
+  .carousel-item img,
+  .carousel-video {
+    height: auto !important;
+    max-height: 70vh;
+  }
+  .col-8,
+  .col-4 {
+    width: 100%;
+  }
+}
+/* Small phones */
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+  .home-text {
+    font-size: 1.1rem;
+  }
+  .project-title {
+    font-size: 2rem;
+  }
+  .button-link {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -93,3 +93,10 @@ export {default as portfolio1} from './portfolio_website1.png'
 export {default as portfolio2} from './portfolio_website2.png'
 export {default as portfolio3} from './portfolio_website3.png'
 export {default as portfolio4} from './portfolio_website4.png'
+
+// Last Round
+export {default as LastRoundTitle} from './LastRoundTitle.png'
+export {default as LastRound1} from './LastRound1.png'
+export {default as LastRound2} from './LastRound2.png'
+export {default as LastRound3} from './LastRound3.png'
+export {default as LastRound4} from './LastRound4.png'

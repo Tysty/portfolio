@@ -119,6 +119,62 @@ export const projects = [
     ),
   },
   {
+    id: "lastround",
+    title: "Last Round",
+    desc: "A turn-based deck-building roguelike shooter game where you strategically load a two-way revolver, spin the chamber, and time every shot to survive waves of enemies.",
+    dev_time: "1 week",
+    team_size: "5",
+    tools: "Unity Game Engine, C#",
+    role: "Programmer",
+    implementations: [
+      "Model-View-Controller(MVC) Code Architecture",
+      "Game State Management",
+      "Bullet Organization System",
+      "Main Menu, Win Screen, Lose Screen, Scene Transitions",
+      "Bullet Type Class Organization",
+      "Entity (Enemy/Player) Class Organization",
+      "Status Effect Management (Stun, Poison, Buff)",
+    ],
+    retrospective: (
+      <p>
+        This game was created for a 7-day game jam. For the game jam theme "Spin
+        to Win," my team and I created a serious turn-based deck-building
+        roguelike shooter where every decision matters. Players load a two-way
+        revolver, spin the chamber, and strategically time each shot to survive
+        relentless waves of enemies. My primary goal was to build a solid,
+        scalable framework so I could spend the rest of the jam rapidly adding
+        new features. I chose to structure the project using the
+        Model-View-Controller (MVC) architecture, which made the codebase easier
+        to maintain and debug. If an issue arose, I could quickly identify
+        whether it originated in the model, view, or controller.
+        <br />
+        <br />
+        With a strong foundation in place, our team had plenty of time to polish
+        the game by adding sound effects, seamless transitions, and gameplay
+        balancing. By the end of the game jam, we placed 6th out of more than
+        11,000 participants and over 4,000 submissions.
+      </p>
+    ),
+    images: [
+      images.LastRound2,
+      images.LastRound3,
+      images.LastRound4,
+      images.LastRound1,
+    ],
+    thumbnail: images.LastRoundTitle,
+    link: (
+      <iframe
+        src="https://itch.io/embed/4718210?bg_color=000000&amp;fg_color=ca0000&amp;link_color=888888"
+        width="552"
+        height="167"
+      >
+        <a href="https://cilantro-lime-rice.itch.io/last-round">
+          Last Round by Cilantro Lime Rice, Mappofu, bro748, Clylen, wesleyhatch
+        </a>
+      </iframe>
+    ),
+  },
+  {
     id: "dicediviners",
     title: "Dice Diviners",
     desc: "A 2d top-down wave fighting game where the player can roll the dice in order to summon new weapons.",
