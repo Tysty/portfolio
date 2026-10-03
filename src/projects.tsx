@@ -1,38 +1,50 @@
 import * as images from "./assets";
 export const projects = [
   {
-    id: "proceduralgeneration",
-    title: "Procedural Generation Workshop",
-    desc: "A workshop covering the wave function colapse and terrain generation with perlin noise for the University of Utah Game Development Club",
-    dev_time: "1 week",
-    team_size: "Solo",
+    id: "grimfarmer",
+    title: "The Grim Farmer",
+    desc: "A game where you plant monster pumpkins during the day and slay them to harvest at night. Meet the quota of pumpkins before it's too late.",
+    dev_time: "48 hours",
+    team_size: "5",
     tools: "Unity Game Engine, C#",
-    role: "Solo Developer",
+    role: "Programmer",
     implementations: [
-      "Wave Function Colapse Demonstration",
-      "Perlin Noise Terrain Generation Demonstration",
-      "3D Modeling of Roads",
+      "Developed complex and fun enemy pumpkin AI",
+      "Made versatile game manager to seamlessly handle day/night cycle and UI events",
+      "Managed game day/night and quota logic ",
     ],
     retrospective: (
       <p>
-        I created this workshop because I often see procedural generation
-        treated as a very complex concept and should only to be used for large
-        projects. While the terminology can sound intimidating, I believe that
-        the core ideas are much more approachable than what most people think.
+        The Grim Farmer was a fun project where I explored creating new enemy AI behaviors
+        and managing complex game logic for the day/night cycle and pumpkin quota system.
+        I wanted to make the enemy AI more dynamic instead of simply moving towards the player.
+        Instead I came up with the idea of having the enemy pumpkins jump towards the player and lunging at them when nearby.
+        This made the enemy pumpkins more unpredictable and challenging. I made the script very customizable to allow for quick
+        adjustments and even different enemy types (faster, stronger, etc.).
         <br />
         <br />
-        In this workshop, I demonstrate two procedural generation techniques:
-        Wave Function Collapse, which creates levels using pre-made tiles, and
-        Perlin Noise, which is commonly used to generate terrain and oceans.
+        For the game manager, I made the script a singleton and created a versatile event system which allowed any script to
+        subscribe to events and respond accordingly, making the game manager highly flexible and modular.
+        <br />
+        <br />
+        Overall, this project taught me a lot about creating flexible and modular game systems for designers to easily implement
+        and modify gameplay mechanics as well as making it more straightforward for programmers to combine their systems with my own.
       </p>
     ),
     images: [
-      images.proceduralGen1,
-      images.proceduralGen2,
-      images.proceduralGen3,
+      images.grimfarmer2,
+      images.grimfarmer3,
+      images.grimfarmer4,
     ],
-    thumbnail: images.proceduralGen1,
-    link: <a></a>,
+    thumbnail: images.grimfarmer1,
+    link: (<iframe 
+            src="https://itch.io/embed/5060104?border_width=5&amp;bg_color=fb922b&amp;fg_color=ffffff&amp;link_color=000000&amp;border_color=000000"
+            width="560"
+            height="175">
+              <a href="https://rmfandyplayz.itch.io/the-grim-farmer">
+                The Grim Farmer by rmfandyplayz, wesleyhatch, Jeksim, Logan Waller, Mappofu
+              </a>
+          </iframe>),
   },
   {
     id: "prawnbrawl",
@@ -170,6 +182,52 @@ export const projects = [
       >
         <a href="https://cilantro-lime-rice.itch.io/last-round">
           Last Round by Cilantro Lime Rice, Mappofu, bro748, Clylen, wesleyhatch
+        </a>
+      </iframe>
+    ),
+  },
+  {
+    id: "molethroughearth",
+    title: "Mole Through The Earth",
+    desc: "A 2d platformer game where you dig and collect mole friends to reach the bottom of the earth.",
+    dev_time: "48 hours",
+    team_size: "6",
+    tools: "Unity Game Engine, C#",
+    role: "Programmer",
+    implementations: [
+      "Made player controller (movement, jumping, and interactions)",
+      "Created mole friend follow system to prevent them from crowding in one spot",
+      "Implemented game cutscenes and menu UI functionality",
+      "Added game polish effects and gameplay juice (particle effects, animations, sound effects)"
+    ],
+    retrospective: (
+      <p>
+        For this project, our goal was to create a fun and engaging 2D platformer experience.
+        Our game featured a digging mechanic to get through certain blocks, and a collecting mechanic 
+        where players could gather mole friends while navigating through various platforming challenges.
+        <br />
+        <br />
+        The main challenge with our project was to make our mechanics
+        of platforming, digging, and collecting into a fun experience.
+        Initially we found that while the game was functional, it lacked
+        the fun and engagement we desired for the player. We resolved this by
+        adding a global leaderboard to increase replayability and adding game 
+        polish effects and gameplay juice to enhance the overall player experience.
+        <br />
+        <br />
+        For this project I learned how to interpret gameplay mechanics from a design doc, adapt them to
+        improve the player's experience and implement them effectively.
+      </p>
+    ),
+    images: [images.molethroughearth2, images.molethroughearth3, images.molethroughearth4],
+    thumbnail: images.molethroughearth1,
+    link: (
+      <iframe 
+      src="https://itch.io/embed/4980849?bg_color=92ff93&amp;fg_color=532a00&amp;link_color=773300"
+      width="552"
+      height="167">
+        <a href="https://sbm5661.itch.io/moles-through-the-earth">
+        Mole Through The Earth by sbm5661, Fourteendigits, SpaceTuna, Mappofu, Logan Waller
         </a>
       </iframe>
     ),

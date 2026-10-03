@@ -10,9 +10,18 @@ export { default as ArrowLeft } from './ArrowLeft.png';
 export { default as ArrowRight } from './ArrowRight.png';
 
 // Procedural Generation Workshop
+/*
 export { default as proceduralGen1 } from './proceduralgeneration2.png';
 export { default as proceduralGen2 } from './ProceduralGeneration.mp4';
 export { default as proceduralGen3 } from './ProceduralGeneration3.mp4';
+*/
+
+// The Grim Farmer
+export {default as grimfarmer1} from './grimfarmer.png';
+export {default as grimfarmer2} from './grimfarmer2.png';
+export {default as grimfarmer3} from './grimfarmer3.png';
+export {default as grimfarmer4} from './grimfarmer4.png';
+
 
 // Prawn Brawl
 export { default as PrawnThumb } from './PrawnBrawl.png';
@@ -25,6 +34,12 @@ export { default as SnailThumb } from './snailspace.png';
 export { default as snail1 } from './snail1.png';
 export { default as SnailTrailer1 } from './SnailspaceVideo.mp4';
 export { default as SnailTrailer2 } from './SnailspaceVideo1.mp4';
+
+// Mole Through The Earth
+export { default as molethroughearth1 } from './molethroughearth.png';
+export { default as molethroughearth2 } from './molethroughearth2.png';
+export { default as molethroughearth3 } from './molethroughearth3.png';
+export { default as molethroughearth4 } from './molethroughearth4.png';
 
 // Dice Diviners
 export { default as dicediviners } from './dicediviners.png';
