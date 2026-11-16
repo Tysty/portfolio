@@ -1,7 +1,4 @@
 import { useNavigate } from "react-router-dom";
-
-import CardDoorTop from "../assets/CardDoorTop.png";
-import CardDoorBottom from "../assets/CardDoorBottom.png";
 import { motion } from "motion/react";
 
 interface Props {
@@ -15,26 +12,14 @@ function ProjectCard({ title, image, desc, link }: Props) {
   const navigate = useNavigate();
   return (
     <motion.div
-      style={{ position: "relative", width: "18rem", margin: "50px" }}
+      className="project-card"
+      style={{ position: "relative" }}
       whileHover={{ scale: 1.1 }}
     >
-      <img
-        src={CardDoorTop}
-        style={{
-          position: "absolute",
-          top: -15,
-          left: 18,
-          width: "23rem",
-          zIndex: 1,
-          pointerEvents: "none",
-        }}
-      />
       <div
         className="card p-2 staggered-fade"
         style={{
-          width: "22rem",
           height: "32rem",
-          margin: "25px",
         }}
       >
         <img
@@ -65,17 +50,6 @@ function ProjectCard({ title, image, desc, link }: Props) {
           </motion.a>
         </div>
       </div>
-      <img
-        src={CardDoorBottom}
-        style={{
-          position: "absolute",
-          bottom: -25,
-          left: 18,
-          width: "23rem",
-          zIndex: 1,
-          pointerEvents: "none",
-        }}
-      />
     </motion.div>
   );
 }

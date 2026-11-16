@@ -10,6 +10,7 @@ const carouselStyle: React.CSSProperties = {
   height: "750px",
   overflow: "hidden",
   paddingLeft: "30px",
+  paddingRight: "30px",
 };
 
 const carouselImageStyle: React.CSSProperties = {
@@ -50,7 +51,7 @@ function ProjectWindow() {
                 >
                   {image.endsWith(".mp4") ? (
                     <video
-                      className="d-block w-100"
+                      className="d-block w-100 border border-2 border-white"
                       controls
                       style={{ objectFit: "contain" }}
                     >
@@ -60,7 +61,7 @@ function ProjectWindow() {
                   ) : (
                     <img
                       src={image}
-                      className="d-block w-100"
+                      className="d-block w-100 border border-2 border-white"
                       alt={`${project.title} screenshot ${index + 1}`}
                       style={carouselImageStyle}
                     />
@@ -134,14 +135,13 @@ function ProjectWindow() {
               </li>
             ))}
           </ul>
+          <div className="" style={{ fontSize: "30px", paddingLeft: "25px" }}>
+            {project.link}
+          </div>
         </div>
       </div>
       <br />
       <div className="nav-separator" />
-      <br />
-      <div className="center" style={{ fontSize: "30px" }}>
-        {project.link}
-      </div>
       <br />
       <h1 className="project-title center">Retrospective</h1>
       {project.retrospective}

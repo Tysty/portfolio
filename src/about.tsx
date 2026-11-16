@@ -10,8 +10,8 @@ function about() {
       exit={{ opacity: 0, y: 25 }}
       transition={{ duration: 0.12 }}
     >
-      <div className="row center">
-        <div className="col-6">
+      <div className="row center about-layout">
+        <div className="col-6 about-copy">
           <h1
             className=" home-title"
             style={{ textAlign: "left", marginLeft: 30 }}
@@ -42,7 +42,7 @@ function about() {
             build interactive software that creates shared experiences.
           </p>
         </div>
-        <div className="col-4">
+        <div className="col-4 about-sidebar">
           <br />
           <img
             src={images.portrait}

@@ -14,10 +14,9 @@ function resume() {
       </h1>
       <br />
       <embed
+        className="resume-embed"
         type="application/pdf"
         style={{ display: "block", margin: "0 auto" }}
-        width="1000"
-        height="1150"
         src={resumePdf}
       />
     </motion.div>

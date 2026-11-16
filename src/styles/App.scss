@@ -188,7 +188,8 @@ li {
     justify-content: center;
 }
 
-.resume-container embed {
+.resume-container embed,
+.resume-embed {
     width: min(100%, 1000px);
     height: min(80vh, 1150px);
 }
@@ -274,8 +275,23 @@ li {
 
 
     .project-card {
-        padding: 10px;
-        width: 100%;
+        width: min(22rem, calc(100vw - 64px)) !important;
+        margin: 30px auto !important;
+        padding: 0;
+
+        .card {
+            width: 100% !important;
+            margin: 25px 0 !important;
+        }
+
+        .project-card-door {
+            left: -8px !important;
+            width: calc(100% + 16px) !important;
+        }
+    }
+
+    .h-group {
+        margin-right: 0 !important;
     }
 
 
@@ -299,6 +315,19 @@ li {
     .col-8,
     .col-4 {
         width: 100%;
+    }
+
+    .about-copy,
+    .about-sidebar {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .about-layout {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

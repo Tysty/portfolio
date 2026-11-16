@@ -147,7 +147,8 @@ li {
   justify-content: center;
 }
 
-.resume-container embed {
+.resume-container embed,
+.resume-embed {
   width: min(100%, 1000px);
   height: min(80vh, 1150px);
 }
@@ -216,8 +217,20 @@ li {
     text-align: center;
   }
   .project-card {
-    padding: 10px;
-    width: 100%;
+    width: min(22rem, calc(100vw - 64px)) !important;
+    margin: 30px auto !important;
+    padding: 0;
+  }
+  .project-card .card {
+    width: 100% !important;
+    margin: 25px 0 !important;
+  }
+  .project-card .project-card-door {
+    left: 0 !important;
+    width: calc(100% + 16px) !important;
+  }
+  .h-group {
+    margin-right: 0 !important;
   }
   .button-link {
     margin: 8px;
@@ -233,6 +246,17 @@ li {
   .col-8,
   .col-4 {
     width: 100%;
+  }
+  .about-copy,
+  .about-sidebar {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .about-layout {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 /* Small phones */
